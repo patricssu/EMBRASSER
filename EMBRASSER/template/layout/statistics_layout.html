@@ -1,0 +1,28 @@
+{%extends 'layout/layout.html'%}
+{%load static%}
+
+{%block layout_title%}회원통계{% endblock%}
+
+{%block layout_style%}
+    <link rel="stylesheet" href="/static/css/statistics.css">
+    {%block style%}{%endblock%}
+{%endblock%}
+
+{%block layout_content%}
+    <div class="event_hidden" id="warning">{{alrt}}</div>
+    <div class="header">
+        <div class="head-title">
+            통계
+        </div>
+    </div>
+    <div class="contents-frame">
+        {%block page%}{%endblock%}
+        {%block content%}{%endblock%}
+    </div>
+{%endblock%}
+
+{%block layout_script%}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{% static '/js/statistics.js' %}"></script>
+{%block script%}{%endblock%}
+{%endblock%}
